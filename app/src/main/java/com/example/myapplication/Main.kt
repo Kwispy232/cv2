@@ -19,6 +19,8 @@ import java.util.*
         }
     }
 
+    fun fishSize(b:Int, aaa:(Int) -> Int):Int = aaa(b);
+
     fun feedTheFish() {
         val day = randomDay()
         val food = fishFood(day)
@@ -27,4 +29,5 @@ import java.util.*
 
     fun main(args: Array<String>) {
         feedTheFish()
+        println(fishSize(5,{a:Int -> a + 10}))
     }
